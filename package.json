@@ -1,0 +1,40 @@
+{
+  "name": "elbiforleni",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Greg Hermo <greg.hermo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.22.3",
+    "@sanity/client": "^2.22.3",
+    "@sanity/core": "^2.22.3",
+    "@sanity/default-layout": "^2.22.4",
+    "@sanity/default-login": "^2.22.3",
+    "@sanity/desk-tool": "^2.22.3",
+    "@sanity/vision": "^2.22.3",
+    "groq": "^2.15.0",
+    "leaflet": "^1.7.1",
+    "next": "^12.0.4",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "react-leaflet": "^3.2.2",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.5.2"
+  }
+}
