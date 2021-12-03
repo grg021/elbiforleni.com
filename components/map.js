@@ -5,7 +5,6 @@ import MapMarker from './map-marker'
 const Map = (props) => {
     const accessToken = process.env.NEXT_PUBLIC_MAPBOX_API
     const id = 'mapbox/light-v10'
-    console.log(props);
     const { events = [] } = props
   return (
     <MapContainer 
