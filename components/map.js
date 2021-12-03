@@ -3,7 +3,7 @@ import 'leaflet/dist/leaflet.css'
 import { IcoLugaw } from './icons'
 
 const Map = (props) => {
-    const accessToken = 'pk.eyJ1IjoiZ3JnMDIxIiwiYSI6ImNrd296ZTNpbTA3dTkyd3FvMHI1Y2llanYifQ.1I_iWVWjVcxV1C0yjwearg'
+    const accessToken = process.env.NEXT_PUBLIC_MAPBOX_API
     const id = 'mapbox/streets-v11'
     const { events = [] } = props
   return (

@@ -1,11 +1,10 @@
 import React from 'react'
 import dynamic from 'next/dynamic'
-import groq from 'groq'
-import client from '../client'
+import { indexQuery } from '../lib/queries'
+import { getClient, overlayDrafts } from '../lib/sanity.server'
 
 function HomePage(props) {
     const { events = [] } = props
-    console.log('=> homepage', events)
   const Map = React.useMemo(() => dynamic(
     () => import('../components/map'), // replace '@components/map' with your component's location
     { 
@@ -16,10 +15,12 @@ function HomePage(props) {
   return <Map events={events} />
 }
 
-HomePage.getInitialProps = async () => ({
-    events: await client.fetch(groq`
-      *[_type == "event" && publishedAt < now()]|order(publishedAt desc)
-    `)
-  })
+export async function getStaticProps() {
+    const preview = false;
+    const events = overlayDrafts(await getClient(preview).fetch(indexQuery))
+    return {
+        props: { events },
+    }
+}
 
 export default HomePage
