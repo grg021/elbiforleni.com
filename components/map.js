@@ -1,10 +1,12 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { IcoLugaw } from './icons'
+import Moment from 'react-moment'
 
 const Map = (props) => {
     const accessToken = process.env.NEXT_PUBLIC_MAPBOX_API
     const id = 'mapbox/light-v10'
+    console.log(props);
     const { events = [] } = props
   return (
     <MapContainer 
@@ -24,7 +26,12 @@ const Map = (props) => {
               icon={IcoLugaw}
               >
                   <Popup>
-                      { event.title } - { event.publishedAt }
+                    <Moment className="text-pink-500" format="lll">{event.publishedAt}</Moment>
+                    <div className="text-gray-700 text-base font-medium mb-1">{ event.title }</div>
+                    <div>
+                      <span>{event.author?.name}</span>
+                      <span className="text-gray-500 italic"> (Coordinator)</span>
+                    </div>
                   </Popup>
               </Marker>
           )
