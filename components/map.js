@@ -11,7 +11,7 @@ const Map = (props) => {
   return (
     <MapContainer 
         center={[14.171000903522813, 121.23059094560394]} 
-        zoom={14} 
+        zoom={13} 
         scrollWheelZoom={false} 
         style={{height: 400, width: "100%"}}>
       <TileLayer
