@@ -24,7 +24,9 @@ export default function Footer() {
           
           <div className="flex flex-col space-y-4">
           <div className="font-medium tracking-wide text-pink-500">Links</div>
-            <InternalLink target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LBForLeni/">Facebook</InternalLink>
+            <InternalLink target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/LBForLeni/">LB Facebook</InternalLink>
+            <InternalLink target="_blank" rel="noopener noreferrer" href="https://www.teamlenirobredo.com/">Team Leni Robredo</InternalLink>
+            <InternalLink target="_blank" rel="noopener noreferrer" href="https://lenirobredo.com/">Leni Robredo</InternalLink>
           </div>
           
         </div>
