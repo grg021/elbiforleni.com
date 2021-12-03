@@ -4,7 +4,7 @@ import { IcoLugaw } from './icons'
 
 const Map = (props) => {
     const accessToken = process.env.NEXT_PUBLIC_MAPBOX_API
-    const id = 'mapbox/streets-v11'
+    const id = 'mapbox/light-v10'
     const { events = [] } = props
   return (
     <MapContainer 
