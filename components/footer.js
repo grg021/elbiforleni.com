@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
-        <div className="py-16 w-full max-w-3xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="py-16 w-full max-w-4xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="flex flex-col space-y-4">
             <div className="mr-8 relative w-40 h-40">
               <Image layout="fill" src="/assets/homepage/lb-for-leni-logo.jpeg" alt="lb leni logo" />
@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-4">
             <div className="font-medium tracking-wide text-pink-500">About</div>
             <div className="mr-8 leading-loose text-gray-600">
-              Nagkakaisang mga taga-suporta ni Vice PRESIDENT Leni Robredo sa Los Banos, Laguna. {' '}
+              Nagkakaisang mga taga-suporta ni Vice PRESIDENT Leni Robredo at Kiko Pangilinan sa Los Banos, Laguna. {' '}
               <HashTag>#LabanLeni2022</HashTag>{' '}
               <HashTag>#MatinoAtMahusay</HashTag>{' '}
               <HashTag>#LBForLeni</HashTag>

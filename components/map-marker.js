@@ -18,18 +18,21 @@ const MapMarker = (props) => {
             icon = IcoLugaw;
     }
     return (
-        <Marker key={event._id} position={[event.location.lat, event.location.lng]} 
-              icon={icon}
-              >
-                  <Popup>
-                    <Moment className="text-pink-500" calendar>{event.publishedAt}</Moment>
-                    <div className="text-gray-700 text-base font-medium mb-1">{ event.title }</div>
-                    <div>
-                      <span>{event.author?.name}</span>
-                      <span className="text-gray-500 italic"> (Coordinator)</span>
-                    </div>
-                  </Popup>
-              </Marker>
+        <Marker 
+            key={event._id} 
+            position={[event.location.lat, event.location.lng]} 
+            icon={icon}>
+            <Popup>
+                <div className="text-base leading-relaxed">
+                <Moment className="text-pink-500" calendar>{event.publishedAt}</Moment>
+                <div className="text-gray-700 font-medium">{ event.title }</div>
+                <div>
+                    <span className="">{event.author?.name}</span>
+                    <span className="text-gray-500 italic text-sm"> (Coordinator)</span>
+                </div>
+                </div>
+            </Popup>
+        </Marker>
     )
 }
 
