@@ -28,7 +28,7 @@ const MapMarker = (props) => {
                 <div className="text-gray-700 font-medium">{ event.title }</div>
                 <div>
                     <span className="">{event.author?.name}</span>
-                    <span className="text-gray-500 italic text-sm"> (Coordinator)</span>
+                    {event.author?.contact && <span className="text-gray-500 italic"> ({event.author?.contact})</span>}
                 </div>
                 </div>
             </Popup>

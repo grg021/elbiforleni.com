@@ -39,7 +39,7 @@ function HomePage(props) {
                     <div className="font-medium text-xl">{ event.title }</div>
                     <div>
                         <span className="">{event.author?.name}</span>
-                        <span className="text-gray-100 italic text-sm"> (Coordinator)</span>
+                        { event.author?.contact && <span className="text-gray-100 italic"> ({event.author?.contact})</span>}
                     </div>
                   </div>
                   )
