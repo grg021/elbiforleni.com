@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'leni-blue': '#031684'
+        'leni-blue': '#031684',
+        'leni-pink': '#ce0f69'
       }
     },
   },
