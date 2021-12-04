@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="py-16 w-full max-w-3xl mx-auto grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div className="flex flex-col space-y-4">
             <div className="mr-8 relative w-40 h-40">
-              <Image width={300} height={300} layout="fill" src="/assets/homepage/lb-for-leni-logo.jpeg" alt="lb leni logo" />
+              <Image layout="fill" src="/assets/homepage/lb-for-leni-logo.jpeg" alt="lb leni logo" />
             </div>
           </div>
           <div className="flex flex-col space-y-4">
