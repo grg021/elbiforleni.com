@@ -35,7 +35,7 @@ function HomePage(props) {
                 futureEvents.map((event, key) => {
                   return (
                   <div key={key} className="leading-relaxed mb-2">
-                    <Moment className="text-pink-500" calendar>{event.publishedAt}</Moment>
+                    <Moment className="text-pink-500" format="llll">{event.publishedAt}</Moment>
                     <div className="font-medium text-xl">{ event.title }</div>
                     <div>
                         <span className="">{event.author?.name}</span>
@@ -61,8 +61,7 @@ function HomePage(props) {
                       </Link>
                       </div>
                     <div>
-                        <span className="">{event.author?.name}</span>
-                        <span className="text-gray-100 italic text-sm"> (Coordinator)</span>
+                        <span className="">by {event.author?.name}</span>
                     </div>
                   </div>
                   )

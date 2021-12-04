@@ -6,14 +6,14 @@ const LegendContainer = tw.div`
 `
 
 const MapLegend = () => {
-    return <div className={'flex flex-col my-8 gap-x-5 max-w-3xl mx-auto sm:flex-row gap-y-5'}>
+    return <div className={'flex flex-col my-8 gap-x-5 max-w-4xl mx-auto sm:flex-row gap-y-5'}>
       <LegendContainer>
         <span className="w-10 text-center"><Image src="/assets/icons/marker-lugaw.png" alt="lugaw icon" width="32" height="35" /></span>
-        <span className="ml-2">PalugawNiLeni</span>
+        <span className="ml-2">Kusina ni Leni / Lugaw ni Leni</span>
       </LegendContainer>
       <LegendContainer>
         <span className="w-10 text-center"><Image src="/assets/icons/cafe-icon.png" alt="lugaw icon" width="35" height="35" /></span>
-        <span className="ml-2">FreeTahoNiLeni / FreeKapeNiLeni</span>
+        <span className="ml-2">Libreng Taho / Libreng Kape ni Leni-Kiko</span>
       </LegendContainer>
       <LegendContainer>
         <span className="w-10 text-center"><Image src="/assets/icons/car-icon.png" alt="lugaw icon" width="23" height="35" /></span>

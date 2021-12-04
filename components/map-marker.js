@@ -6,7 +6,7 @@ const MapMarker = (props) => {
     const {event} = props;
     let icon;
 
-    switch(event.category.title) {
+    switch(event.category?.title) {
         case 'Caravan':
             icon = IcoCar;
             break;

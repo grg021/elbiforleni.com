@@ -20,7 +20,7 @@ const Map = ({events, futureEvents}) => {
         <FilterButton active={filter === 0} onClick={() => {setMarkers(events); setFilter(0)}}>Show All</FilterButton>
         <FilterButton active={filter === 1} onClick={() => {setMarkers(futureEvents); setFilter(1)}}>Upcoming Only</FilterButton>
     </div>
-    <div className="filter drop-shadow-lg">
+    <div className="border border-pink-500 shadow-lg">
       <MapContainer 
           center={[14.171000903522813, 121.23059094560394]} 
           zoom={13} 
