@@ -1,6 +1,5 @@
 import { sanityClient, getClient } from '../../lib/sanity.server'
 import { postSlugsQuery, postBySlugQuery, eventQuery} from '../../lib/queries'
-import {usePreviewSubscription} from '../../lib/sanity'
 import ErrorPage from 'next/error'
 import { useRouter } from 'next/router'
 import EventTitle from '../../components/event-title'
@@ -11,13 +10,9 @@ import Head from 'next/head'
 import BlockContent from '@sanity/block-content-to-react'
 import client from '../../client'
 import Image from 'next/image'
-import imageUrlBuilder from '@sanity/image-url'
 import Moment from 'react-moment'
 import post from '../../schemas/post'
-
-function urlFor (source) {
-    return imageUrlBuilder(client).image(source)
-  }
+import { urlForImage, usePreviewSubscription } from '../../lib/sanity'
 
 const Post = ({ data = {}, preview }) => {
 
@@ -39,6 +34,9 @@ const Post = ({ data = {}, preview }) => {
 
   const {
     title = 'Missing title',
+    author = {
+      name: ''
+    },
     mainImage,
     body = []
   } = event
@@ -46,7 +44,7 @@ const Post = ({ data = {}, preview }) => {
   return (
     <Layout preview={preview}>
         <Head>
-          <title>{event.title} | elbi for Leni Robredo</title>
+          <title>{title} | elbi for Leni Robredo</title>
         </Head>
         <Container>
             <Header />
@@ -55,15 +53,18 @@ const Post = ({ data = {}, preview }) => {
             ) : (
                 <article className="max-w-2xl mx-auto my-16">
                     <div className="text-pink-500 text-lg"><Moment format="lll">{post.publishedAt}</Moment></div>
-                    <h1 className={'text-3xl my-3'}>{event.title}</h1>
-                    <span className={'text-gray-400 text-lg'}>By {event.author.name}</span>
+                    <h1 className={'text-3xl my-3'}>{title}</h1>
+                    <span className={'text-gray-600 text-lg'}>By {author.name}</span>
                     {mainImage && (
-                        <div className="bg-pink-200 p-2 my-5">
-                        <img
-                            src={urlFor(mainImage)
-                            .url()}
+                      <div className="bg-pink-200 p-2 my-5">
+                        <div className="w-full h-96 relative filter drop-shadow-sm">
+                        <Image
+                            src={urlForImage(mainImage).url()}
                             alt="main image"
+                            layout="fill" 
+                            objectFit="cover"
                         />
+                        </div>
                         </div>
                     )}
                     <BlockContent
@@ -99,7 +100,7 @@ export async function getStaticPaths() {
   const paths = await sanityClient.fetch(postSlugsQuery)
   return {
     paths: paths.map((slug) => ({ params: { slug } })),
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
