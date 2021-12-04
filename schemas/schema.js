@@ -7,6 +7,7 @@ import category from './category'
 import event from './event'
 import author from './author'
 import blockcontent from './blockcontent'
+import post from './post'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -18,6 +19,7 @@ export default createSchema({
     event,
     author,
     category,
+    post,
     blockcontent
   ]),
 })
