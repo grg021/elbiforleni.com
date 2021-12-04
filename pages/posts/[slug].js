@@ -54,7 +54,7 @@ const Post = ({ data = {}, preview }) => {
                 <article className="max-w-2xl mx-auto my-16">
                     <div className="text-pink-500 text-lg"><Moment format="lll">{post.publishedAt}</Moment></div>
                     <h1 className={'text-3xl my-3'}>{title}</h1>
-                    <span className={'text-gray-600 text-lg'}>By {author.name}</span>
+                    { author && (<span className={'text-gray-600 text-lg'}>By {author.name}</span>)}
                     {mainImage && (
                       <div className="bg-pink-200 p-2 my-5">
                         <div className="w-full h-96 relative filter drop-shadow-sm">

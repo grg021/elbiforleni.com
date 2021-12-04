@@ -56,7 +56,7 @@ function HomePage(props) {
                   <div key={key} className="leading-relaxed mb-2">
                     <Moment className="" format="lll">{event.publishedAt}</Moment>
                     <div className="font-medium text-xl">
-                      <Link prefetch href="/posts/[slug]" as={`/posts/${event.slug}`}>
+                      <Link href="/posts/[slug]" as={`/posts/${event.slug}`}>
                         <a>{ event.title }</a>
                       </Link>
                       </div>
