@@ -5,6 +5,7 @@ import { getClient, overlayDrafts } from '../lib/sanity.server'
 import Layout from '../components/layout'
 import Head from 'next/head'
 import Container from '../components/container'
+import Image from 'next/image'
 
 function HomePage(props) {
     const { events = [], preview } = props
@@ -32,6 +33,20 @@ function HomePage(props) {
         </section>
         <div className="filter drop-shadow-lg">
           <Map events={events} />
+        </div>
+        <div className={'flex flex-col my-8 gap-x-5 max-w-3xl mx-auto sm:flex-row gap-y-5'}>
+          <div className={'p-2 bg-pink-50 flex items-center rounded-md'}>
+            <span className="w-10 text-center"><Image src="/assets/icons/marker-lugaw.png" alt="lugaw icon" width="32" height="35" /></span>
+            <span className="ml-2">PalugawNiLeni</span>
+          </div>
+          <div className={'p-2 bg-pink-50 flex items-center rounded-md'}>
+          <span className="w-10 text-center"><Image src="/assets/icons/cafe-icon.png" alt="lugaw icon" width="35" height="35" /></span>
+            <span className="ml-2">FreeTahoNiLeni / FreeKapeNiLeni</span>
+          </div>
+          <div className={'p-2 bg-pink-50 flex items-center rounded-md'}>
+            <span className="w-10 text-center"><Image src="/assets/icons/car-icon.png" alt="lugaw icon" width="23" height="35" /></span>
+            <span className="ml-2">Leni-Kiko Caravan</span>
+          </div>
         </div>
         </Container>
       </Layout>
