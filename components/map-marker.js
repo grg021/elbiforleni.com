@@ -1,10 +1,20 @@
 import { Marker, Popup } from 'react-leaflet'
 import { IcoLugaw, IcoCafe, IcoCar } from './icons'
 import Moment from 'react-moment'
+import * as ga from '../lib/ga'
 
 const MapMarker = (props) => {
     const {event} = props;
     let icon;
+
+    const markerClickHandler = (e) => {
+        ga.event({
+          action: "marker_click",
+          params : {
+            event: event
+          }
+        })
+      }
 
     switch(event.category?.title) {
         case 'Caravan':
@@ -19,6 +29,9 @@ const MapMarker = (props) => {
     }
     return (
         <Marker 
+            eventHandlers={{
+                click: markerClickHandler
+            }}
             key={event._id} 
             position={[event.location.lat, event.location.lng]} 
             icon={icon}>
