@@ -93,6 +93,7 @@ export async function getStaticProps({ params, preview = false }) {
         event
       },
     },
+    revalidate: 60,
   }
 }
 
