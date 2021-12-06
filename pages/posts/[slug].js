@@ -71,7 +71,7 @@ const Post = ({ data = {}, preview }) => {
                             src={urlForImage(mainImage).url()}
                             alt="main image"
                             layout="fill" 
-                            objectFit="cover"
+                            objectFit="contain"
                         />
                         </div>
                         </div>
