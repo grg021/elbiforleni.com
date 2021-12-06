@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { HOME_OG_IMAGE_URL, HOME_OG_DESC, HOME_OG_TITLE } from '../lib/constants'
+import { HOME_OG_IMAGE_URL, HOME_OG_DESC, HOME_OG_TITLE, SITE_URL } from '../lib/constants'
 
 export default function Meta() {
   return (
@@ -38,7 +38,9 @@ export default function Meta() {
       />
       <meta property="og:title" content={HOME_OG_TITLE} key="ogTitle" />
       <meta property="og:description" content={HOME_OG_DESC} key="ogDescription" />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} key="ogImage" />
+      <meta property="og:image" content={`${SITE_URL}${HOME_OG_IMAGE_URL}`} key="ogImage" />
+      <meta property="og:url" content={SITE_URL} key="ogurl" />
+      <meta property="og:site_name" content={HOME_OG_TITLE} key="ogsitename" />
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <script
             async

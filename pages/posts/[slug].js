@@ -11,8 +11,8 @@ import BlockContent from '@sanity/block-content-to-react'
 import client from '../../client'
 import Image from 'next/image'
 import Moment from 'react-moment'
-import post from '../../schemas/post'
 import { urlForImage, usePreviewSubscription } from '../../lib/sanity'
+import {SITE_URL} from '../../lib/constants'
 
 const Post = ({ data = {}, preview }) => {
 
@@ -38,6 +38,8 @@ const Post = ({ data = {}, preview }) => {
       name: ''
     },
     mainImage,
+    publishedAt,
+    description = '',
     body = []
   } = event
 
@@ -45,6 +47,13 @@ const Post = ({ data = {}, preview }) => {
     <Layout preview={preview}>
         <Head>
           <title>{title} | elbi for Leni Robredo</title>
+          <meta name="description" content={description} />
+          <meta property="og:title" content={title} key="ogTitle" />
+          <meta property="og:description" content={description} key="ogDescription" />
+          <meta property="og:url" content={`${SITE_URL}posts/${event.slug}`} key="ogurl" />
+          {mainImage && (
+          <meta property="og:image" content={urlForImage(mainImage).url()} key="ogImage" />
+          )}
         </Head>
         <Container>
             <Header />
@@ -52,7 +61,7 @@ const Post = ({ data = {}, preview }) => {
                 <EventTitle>Loading…</EventTitle>
             ) : (
                 <article className="max-w-2xl mx-auto my-16">
-                    <div className="text-pink-500 text-lg"><Moment format="lll">{post.publishedAt}</Moment></div>
+                    <div className="text-pink-500 text-lg"><Moment format="lll">{publishedAt}</Moment></div>
                     <h1 className={'text-3xl my-3'}>{title}</h1>
                     { author && (<span className={'text-gray-600 text-lg'}>By {author.name}</span>)}
                     {mainImage && (
