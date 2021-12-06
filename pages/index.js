@@ -1,5 +1,4 @@
 import React from 'react'
-import dynamic from 'next/dynamic'
 import { eventQuery } from '../lib/queries'
 import { getClient, overlayDrafts } from '../lib/sanity.server'
 import Layout from '../components/layout'
@@ -8,16 +7,10 @@ import Container from '../components/container'
 import Moment from 'react-moment'
 import Header from '../components/header'
 import Link from 'next/link'
+import Map from '../components/map'
 
 function HomePage(props) {
   const { futureEvents = [], events = [], posts = [], preview } = props
-  const Map = React.useMemo(() => dynamic(
-    () => import('../components/map'),
-    { 
-      loading: () => <p>Map is loading</p>,
-      ssr: false
-    }
-  ), [/* list variables which should trigger a re-render here */])
   return (
     <>
       <Layout preview={preview}>
