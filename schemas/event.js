@@ -51,6 +51,16 @@ export default {
         name: 'location',
         title: 'Location',
         type: 'geopoint'
+      },
+      {
+        name: 'preEventUrl',
+        title: 'Pre-Event URL',
+        type: 'url'
+      },
+      {
+        name: 'postEventUrl',
+        title: 'PostEvent URL',
+        type: 'url'
       }
     ],
   
