@@ -8,7 +8,7 @@ const MapBox = ({markers}) => {
     const id = 'mapbox/light-v10'
     const pinkOptions = { color: 'hotPink', opacity: 1, fillOpacity: 0.02, weight: 1 }
     return (
-        <div className="border border-pink-500 shadow-lg">
+        <div className="border border-pink-500 shadow-lg rounded-sm">
             <MapContainer 
                 center={[14.171000903522813, 121.23059094560394]} 
                 zoom={13} 

@@ -5,6 +5,7 @@ import Container from '../components/container'
 import Header from '../components/header'
 import { HashTag } from '../components/styled'
 import Image from 'next/image';
+import {SITE_URL} from '../lib/constants'
 
 const Contact = () => {
   return (
@@ -12,6 +13,10 @@ const Contact = () => {
       <Layout>
         <Head>
           <title>Contact | elbi for Leni Robredo</title>
+          <meta name="description" content="Contact us or donate." />
+          <meta property="og:title" content="Contact | elbi for Leni Robredo" key="ogTitle" />
+          <meta property="og:description" content="Contact us or donate." key="ogDescription" />
+          <meta property="og:url" content={`${SITE_URL}contact`} key="ogurl" />
         </Head>
         <Container>
           <Header />
