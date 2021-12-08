@@ -11,9 +11,11 @@ import Map from '../components/map'
 import { urlForImage } from '../lib/sanity'
 import Image from 'next/image'
 import {SITE_TITLE} from '../lib/constants'
+import moment from 'moment'
 
 function HomePage(props) {
-  const { futureEvents = [], events = [], posts = [], preview } = props
+  const { events = [], posts = [], preview } = props
+  const futureEvents = events.filter(event => moment(event.publishedAt).isAfter())
   return (
     <>
       <Layout preview={preview}>
@@ -36,7 +38,8 @@ function HomePage(props) {
               <div className="uppercase opacity-80 text-3xl font-bold mb-4 mt-2">Upcoming Events</div>
               <div className="overflow-auto h-72">
               { 
-                futureEvents.map((event, key) => {
+                futureEvents
+                .map((event, key) => {
                   return (
                   <div key={key} className="leading-relaxed mb-2">
                     <Moment className="text-pink-500" format="llll">{event.publishedAt}</Moment>
