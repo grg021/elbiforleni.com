@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Map from '../components/map'
 import { urlForImage } from '../lib/sanity'
 import Image from 'next/image'
+import {SITE_TITLE} from '../lib/constants'
 
 function HomePage(props) {
   const { futureEvents = [], events = [], posts = [], preview } = props
@@ -17,14 +18,14 @@ function HomePage(props) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>elbi for Leni Robredo</title>
+          <title>{SITE_TITLE}</title>
         </Head>
         <Container>
           <Header />
           <Map events={events} futureEvents={futureEvents} />
           <section className="my-4 shadow-inner py-10 sm:px-10 px-5 bg-pink-50 rounded-sm">
             <div className="text-5xl text-center font-bold mb-5 text-leni-pink">Elbi4Leni-Kiko</div>
-            <div className="text-center text-xl text-gray-600 my-10 max-w-2xl mx-auto ">The Elbi4Leni-Kiko group is composed of volunteers from Los Banos or with roots or connections with Los Banos. The vision of the group is to transform Los Banos into a Pink Town and ensure a landslide win for VP Leni Robredo and Sen. Kiko Pangilinan.</div>
+            <div className="text-center text-xl text-gray-600 my-10 max-w-2xl mx-auto ">The Elbi4Leni-Kiko group is composed of volunteers from Los Baños or with roots or connections with Los Baños. The vision of the group is to transform Los Baños into a Pink Town and ensure a landslide win for VP Leni Robredo and Sen. Kiko Pangilinan.</div>
             <div className="text-center">
               <Link href="/contact">
                 <a className="uppercase focus:outline-none text-white py-2.5 px-5 rounded-md bg-pink-500 hover:bg-pink-600 hover:shadow-lg sm:text-xl">Contact Us or Donate</a></Link>

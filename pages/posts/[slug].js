@@ -12,7 +12,7 @@ import client from '../../client'
 import Image from 'next/image'
 import Moment from 'react-moment'
 import { urlForImage, usePreviewSubscription } from '../../lib/sanity'
-import {SITE_URL} from '../../lib/constants'
+import {SITE_TITLE, SITE_URL} from '../../lib/constants'
 
 const Post = ({ data = {}, preview }) => {
 
@@ -46,7 +46,7 @@ const Post = ({ data = {}, preview }) => {
   return (
     <Layout preview={preview}>
         <Head>
-          <title>{title} | elbi for Leni Robredo</title>
+          <title>{title} | {SITE_TITLE}</title>
           <meta name="description" content={description} />
           <meta property="og:title" content={title} key="ogTitle" />
           <meta property="og:description" content={description} key="ogDescription" />

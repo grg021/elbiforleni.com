@@ -5,16 +5,16 @@ import Container from '../components/container'
 import Header from '../components/header'
 import { HashTag } from '../components/styled'
 import Image from 'next/image';
-import {SITE_URL} from '../lib/constants'
+import {SITE_URL, SITE_TITLE} from '../lib/constants'
 
 const Contact = () => {
   return (
     <>
       <Layout>
         <Head>
-          <title>Contact | elbi for Leni Robredo</title>
+          <title>Contact | {SITE_TITLE}</title>
           <meta name="description" content="Contact us or donate." />
-          <meta property="og:title" content="Contact | elbi for Leni Robredo" key="ogTitle" />
+          <meta property="og:title" content={`Contact | ${SITE_TITLE}`} key="ogTitle" />
           <meta property="og:description" content="Contact us or donate." key="ogDescription" />
           <meta property="og:url" content={`${SITE_URL}contact`} key="ogurl" />
         </Head>
@@ -32,20 +32,22 @@ const Contact = () => {
               <div className="text-center uppercase opacity-80 text-3xl font-bold mb-4 mt-2">Contact Us</div>
               <div className="overflow-auto h-72 text-center pt-10">
                 <div>For inquiries, concerns or requests, <br/>please contact:</div>
-                <div className="text-2xl">Ms. Noreen</div>
+                <div className="text-2xl mt-2">Ms. Noreen</div>
                 <div className="text-2xl underline">0916 412 0439</div>
+                <div className="text-2xl">pinktownlb@gmail.com</div>
               </div>
             </div>
             <div className="bg-leni-blue p-6 text-white text-lg">
               <div className="text-center uppercase opacity-80 text-3xl font-bold mb-4 mt-2">Donate</div>
               <div className="text-center">
               <div>For donations, you may send via GCASH:</div>
-              <div className="text-2xl">PinkTownLB (Angelique M.)</div>
+              <div className="text-2xl mt-2">PinkTownLB (Angelique M.)</div>
               <div className="text-2xl">(09** ***0439)</div>
               <div className="mt-2"><Image 
                 alt="gcash qr code"
               src="/assets/contact/gcash-angelique.jpg" width="300" height="300" />
               </div>
+              <div>Send screenshot of donation to <strong>pinktownlb@gmail.com</strong></div>
               </div>
             </div>
           </section>
