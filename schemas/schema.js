@@ -8,6 +8,8 @@ import event from './event'
 import author from './author'
 import blockcontent from './blockcontent'
 import post from './post'
+import business from './business'
+import businessType from './business.type'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,6 +22,8 @@ export default createSchema({
     author,
     category,
     post,
+    business,
+    businessType,
     blockcontent
   ]),
 })

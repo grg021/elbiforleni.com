@@ -9,6 +9,16 @@ export default {
         type: 'string'
       },
       {
+        name: 'description',
+        title: 'Description',
+        type: 'string'
+      },
+      {
+        name: 'exactLocation',
+        title: 'Exact Location',
+        type: 'string'
+      },
+      {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
@@ -51,6 +61,16 @@ export default {
         name: 'location',
         title: 'Location',
         type: 'geopoint'
+      },
+      {
+        name: 'preEventUrl',
+        title: 'Pre-Event URL',
+        type: 'url'
+      },
+      {
+        name: 'postEventUrl',
+        title: 'PostEvent URL',
+        type: 'url'
       }
     ],
   
