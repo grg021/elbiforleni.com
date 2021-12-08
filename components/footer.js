@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-4">
             <div className="font-medium tracking-wide text-pink-500">About</div>
             <div className="mr-8 leading-loose text-gray-600">
-              Nagkakaisang mga taga-suporta ni Vice PRESIDENT Leni Robredo at Kiko Pangilinan sa Los Banos, Laguna. {' '}
+              Nagkakaisang mga taga-suporta ni Vice PRESIDENT Leni Robredo at Sen. Kiko Pangilinan sa Los Banos, Laguna. {' '}
               <HashTag>#LabanLeni2022</HashTag>{' '}
               <HashTag>#MatinoAtMahusay</HashTag>{' '}
               <HashTag>#LBForLeni</HashTag>
