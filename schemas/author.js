@@ -18,6 +18,11 @@ export default {
         }
       },
       {
+        name: 'contact',
+        title: 'Contact',
+        type: 'string'
+      },
+      {
         name: 'image',
         title: 'Image',
         type: 'image',
