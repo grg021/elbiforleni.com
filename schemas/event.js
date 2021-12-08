@@ -9,6 +9,16 @@ export default {
         type: 'string'
       },
       {
+        name: 'description',
+        title: 'Description',
+        type: 'string'
+      },
+      {
+        name: 'exactLocation',
+        title: 'Exact Location',
+        type: 'string'
+      },
+      {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
