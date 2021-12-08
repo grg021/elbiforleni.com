@@ -47,7 +47,8 @@ const Contact = () => {
                 alt="gcash qr code"
               src="/assets/contact/gcash-angelique.jpg" width="300" height="300" />
               </div>
-              <div>Send screenshot of donation to <strong>pinktownlb@gmail.com</strong></div>
+              <div>Send screenshot of donation to <strong>pinktownlb@gmail.com</strong> <br/>
+              along with any note on desired project and/or beneficiary barangay.</div>
               </div>
             </div>
           </section>
