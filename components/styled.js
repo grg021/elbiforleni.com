@@ -5,7 +5,11 @@ export const InternalLink = tw.a`
 `
 
 export const HashTag = tw.span`
-  text-white bg-pink-400 p-1 rounded-sm hover:text-pink-100 transition
+  text-white bg-pink-500 p-1 rounded-sm hover:text-pink-100 transition
+`
+
+export const Highlight = tw.span`
+bg-pink-100 text-pink-800 p-1 rounded-sm hover:text-pink-100 transition
 `
 
 export const FilterButton = tw.div`

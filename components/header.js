@@ -9,7 +9,7 @@ export default function Header() {
       </h1>
       </Link>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A project to paint the town <span className="text-pink-500 font-medium">pink</span>.
+        A project to paint Los Baños <span className="text-pink-500 font-medium">pink</span>.
       </h4>
     </section>
   )
