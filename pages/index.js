@@ -37,17 +37,17 @@ function HomePage(props) {
           <Map events={events} futureEvents={futureEvents}/>
           <section className="my-4 shadow-inner py-10 px-5 lg:px-10 rounded-lg" style={{backgroundImage: "linear-gradient(0deg,rgba(206,15,105,.75),rgba(206,15,105,.75)),url('/assets/donate/leni-solo.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}> 
             <div className="text-4xl lg:text-5xl text-center font-bold mb-5 text-white opacity-90">Welcome, KakamPink!</div>
-            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-70">Ito ang ating <strong>"Virtual Headquarters"</strong> kung saan makikita ating <strong>"Pink Activities"</strong>. Layunin natin na maabot ang bawat sulok ng ating bayan para sa <strong>landslide</strong> na pagka-panalo ni VP Leni at Sen. Kiko. </div>
-            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-80">Let's paint Los Baños PINK!</div>
+            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-70">Ito ang ating <strong>&quot;Virtual Headquarters&quot;</strong> kung saan makikita ating <strong>&quot;Pink Activities&quot;</strong>. Layunin natin na maabot ang bawat sulok ng ating bayan para sa <strong>landslide</strong> na pagka-panalo ni VP Leni at Sen. Kiko. </div>
+            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-80">Let&apos;s paint Los Baños PINK!</div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <MidCard>
-                Ang iyong donasyon ay malaking tulong para maabot ng Elbi4Leni-Kiko volunteers ang iba't-ibang komunidad ng Los Baños.<br/><br/>  
+                Ang iyong donasyon ay malaking tulong para maabot ng Elbi4Leni-Kiko volunteers ang iba&apos;t-ibang komunidad ng Los Baños.<br/><br/>  
                 <div className='text-center'>
                   <Link href="/donate"><MidLink>Donate</MidLink></Link>
                 </div>
               </MidCard>
               <MidCard>
-                Kailangan pa natin ng mas maraming barangay volunteers at coordinators. <br/>Tara't palawakin pa ang ating hanay!<br/><br/>
+                Kailangan pa natin ng mas maraming barangay volunteers at coordinators. <br/>Tara&apos;t palawakin pa ang ating hanay!<br/><br/>
                 <div className='text-center'>
                   <MidLink 
                   href="https://forms.gle/hooYPbw4JoMPX5u69"
