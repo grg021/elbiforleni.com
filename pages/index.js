@@ -35,10 +35,10 @@ function HomePage(props) {
         <Container>
           <Header />
           <Map events={events} futureEvents={futureEvents}/>
-          <section className="my-4 shadow-inner py-10 px-5 lg:px-10 rounded-lg" style={{backgroundImage: "linear-gradient(0deg,rgba(206,15,105,.75),rgba(206,15,105,.75)),url('/assets/donate/leni-solo.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}> 
+          <section className="my-4 shadow-inner py-10 px-5 lg:px-10 rounded-lg" style={{backgroundImage: "url('/assets/homepage/homepage-background.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}> 
             <div className="text-4xl lg:text-5xl text-center font-bold mb-5 text-white opacity-90">Welcome, KakamPink!</div>
-            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-70">Ito ang ating <strong>&quot;Virtual Headquarters&quot;</strong> kung saan makikita ating <strong>&quot;Pink Activities&quot;</strong>. Layunin natin na maabot ang bawat sulok ng ating bayan para sa <strong>landslide</strong> na pagka-panalo ni VP Leni at Sen. Kiko. </div>
-            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-80">Let&apos;s paint Los Baños PINK!</div>
+            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-70">Ito ang ating <strong>&quot;Virtual Headquarters&quot;</strong> kung saan makikita ang ating <strong>&quot;Pink Activities&quot;</strong>. Layunin natin na maabot ang bawat sulok ng ating bayan para sa <strong>landslide</strong> na pagka-panalo ni VP Leni at Sen. Kiko. </div>
+            <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-80"><strong>Let&apos;s paint Los Baños PINK!</strong></div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <MidCard>
                 Ang iyong donasyon ay malaking tulong para maabot ng Elbi4Leni-Kiko volunteers ang iba&apos;t-ibang komunidad ng Los Baños.<br/><br/>  
@@ -57,7 +57,7 @@ function HomePage(props) {
                 </div>
                </MidCard>
                <MidCard>
-                I-rehistro ang iyong activity (or mag-sumite ng activity proposal) para mabigyan ng full support ng Elbi4Leni-Kiko core team.<br/><br/>
+               I-rehistro ang iyong activity para ma-coordinate ng Elbi4Leni-Kiko core team para sa optimal na resulta ng mga activities.<br/><br/>
                 <div className='text-center'>
                 <MidLink 
                   href="https://forms.gle/VL6m4aiwy7e6nbqC6"
