@@ -10,6 +10,7 @@ import blockcontent from './blockcontent'
 import post from './post'
 import business from './business'
 import businessType from './business.type'
+import member from "./member";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -24,6 +25,7 @@ export default createSchema({
     post,
     business,
     businessType,
-    blockcontent
+    blockcontent,
+    member
   ]),
 })
