@@ -35,34 +35,36 @@ function HomePage(props) {
         <Container>
           <Header />
           <Map events={events} futureEvents={futureEvents}/>
-          <section className="my-4 shadow-inner py-10 px-5 lg:px-10 rounded-lg" style={{backgroundImage: "url('/assets/homepage/homepage-background.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}> 
+          <section className="my-4 shadow-inner py-10 px-5 lg:px-10 rounded-lg" style={{backgroundImage: "url('/assets/homepage/homepage-background.jpeg')", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
             <div className="text-4xl lg:text-5xl text-center font-bold mb-5 text-white opacity-90">Welcome, KakamPink!</div>
             <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-70">Ito ang ating <strong>&quot;Virtual Headquarters&quot;</strong> kung saan makikita ang ating <strong>&quot;Pink Activities&quot;</strong>. Layunin natin na maabot ang bawat sulok ng ating bayan para sa <strong>landslide</strong> na pagka-panalo ni VP Leni at Sen. Kiko. </div>
             <div className="text-center text-l lg:text-xl text-white my-10 max-w-2xl mx-auto opacity-80"><strong>Let&apos;s paint Los Baños PINK!</strong></div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <MidCard>
-                Ang iyong donasyon ay malaking tulong para maabot ng Elbi4Leni-Kiko volunteers ang iba&apos;t-ibang komunidad ng Los Baños.<br/><br/>  
+                Ang iyong donasyon ay malaking tulong para maabot ng Elbi4Leni-Kiko volunteers ang iba&apos;t-ibang komunidad ng Los Baños.<br/><br/>
                 <div className='text-center'>
-                  <Link href="/donate"><MidLink>Donate</MidLink></Link>
+                  <Link href="/donate" passHref><MidLink>Donate</MidLink></Link>
                 </div>
               </MidCard>
               <MidCard>
                 Kailangan pa natin ng mas maraming barangay volunteers at coordinators. <br/>Tara&apos;t palawakin pa ang ating hanay!<br/><br/>
                 <div className='text-center'>
-                  <MidLink 
+                  <MidLink
                   href="https://forms.gle/hooYPbw4JoMPX5u69"
                   target="_blank"
                   rel="noopener noreferrer"
+                  passHref
                   >Volunteer</MidLink>
                 </div>
                </MidCard>
                <MidCard>
                I-rehistro ang iyong activity para ma-coordinate ng Elbi4Leni-Kiko core team para sa optimal na resulta ng mga activities.<br/><br/>
                 <div className='text-center'>
-                <MidLink 
+                <MidLink
                   href="https://forms.gle/VL6m4aiwy7e6nbqC6"
                   target="_blank"
                   rel="noopener noreferrer"
+                  passHref
                   >Organize Activity</MidLink>
                 </div>
               </MidCard>
@@ -72,7 +74,7 @@ function HomePage(props) {
             <div className="bg-leni-blue text-white p-6 text-lg shadow-inner rounded-md">
               <div className="uppercase opacity-80 text-3xl font-bold mb-4 mt-2">Upcoming Events</div>
               <div className="overflow-auto h-72">
-              { 
+              {
                 futureEvents
                 .map((event, key) => {
                   return (
@@ -93,7 +95,7 @@ function HomePage(props) {
             <div className="bg-leni-pink p-6 text-white text-lg shadow-inner rounded-md">
               <div className="uppercase opacity-80 text-3xl font-bold mb-4 mt-2">Press Releases</div>
               <div className="overflow-auto h-72">
-              { 
+              {
                 posts.map((event, key) => {
                   return (
                   <div key={key} className="leading-relaxed mb-2">
@@ -105,7 +107,7 @@ function HomePage(props) {
                           className="rounded-full shadow-inner"
                             src={urlForImage(event.mainImage).url()}
                             alt="main image"
-                            layout="fill" 
+                            layout="fill"
                             objectFit="cover"
                         />
                         </div>
@@ -136,10 +138,10 @@ function HomePage(props) {
 export async function getStaticProps({ preview = false }) {
   const { events, futureEvents, posts } = await getClient(preview).fetch(eventQuery)
   return {
-      props: { 
-        events: overlayDrafts(events), 
+      props: {
+        events: overlayDrafts(events),
         futureEvents: overlayDrafts(futureEvents),
-        posts: overlayDrafts(posts) 
+        posts: overlayDrafts(posts)
       },
       revalidate: 60,
   }
