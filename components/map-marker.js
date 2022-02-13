@@ -4,6 +4,7 @@ import Moment from 'react-moment'
 import * as ga from '../lib/ga'
 import Link from 'next/link'
 import moment from 'moment'
+import IcoIceCream from './icons/ico-icecream'
 
 const MapMarker = (props) => {
     const {event} = props;
@@ -22,6 +23,9 @@ const MapMarker = (props) => {
         case 'Caravan':
             icon = IcoCar;
             break;
+        case 'Sorbetes':
+                icon = IcoIceCream;
+                break;    
         case 'Kapihan':
         case 'Free Taho':
             icon = IcoCafe;
